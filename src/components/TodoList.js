@@ -18,7 +18,7 @@ export const TodoList = () => {
           >
             <li>{todo.text}</li>
           </div>
-          <div className="btn-container">
+          <div >
             <button className="btn" onClick={() => completeTodo(todo.id)}>
               Complete
             </button>
