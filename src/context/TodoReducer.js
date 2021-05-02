@@ -1,4 +1,4 @@
-const TodoReducer = (state, action) => {
+export const TodoReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TODO":
       return {
@@ -31,5 +31,3 @@ const TodoReducer = (state, action) => {
       return state;
   }
 };
-
-export default TodoReducer;

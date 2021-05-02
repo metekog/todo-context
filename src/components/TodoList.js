@@ -3,18 +3,17 @@ import { TodoContext } from "../context/TodoContext";
 
 export const TodoList = () => {
   const { todos, deleteTodo, completeTodo } = useContext(TodoContext);
-
+  console.log(todos);
   return (
-    <>
-      {todos?.map((todo) => (
-        <div>
+    <div>
+      {todos&&todos.map((todo) => (
+        <div key={todo.id}>
           <div
             style={{
               textDecoration: todo.complete ? "line-through" : "",
               background: todo.complete ? "#23d41d" : "#e74242",
             }}
             className="list"
-            key={todo.id}
           >
             <li>{todo.text}</li>
           </div>
@@ -28,6 +27,6 @@ export const TodoList = () => {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
