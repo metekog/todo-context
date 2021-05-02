@@ -1,12 +1,14 @@
 export const TodoReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TODO":
+      localStorage.setItem("todos", JSON.stringify(state.todos));
       return {
         ...state,
         todos: [action.payload, ...state.todos],
       };
 
     case "DELETE_TODO":
+      localStorage.setItem("todos", JSON.stringify(state.todos));
       return {
         ...state,
         todos: state.todos.filter((todos) => todos.id !== action.payload),
