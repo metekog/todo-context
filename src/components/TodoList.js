@@ -6,7 +6,7 @@ export const TodoList = () => {
   console.log(todos);
   return (
     <div>
-      {todos&&todos.map((todo) => (
+      {todos.map((todo) => (
         <div key={todo.id}>
           <div
             style={{
