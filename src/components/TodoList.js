@@ -9,19 +9,21 @@ export const TodoList = () => {
       {todos.map((todo) => (
         <div key={todo.id}>
           <div
+            onClick={() => completeTodo(todo.id)}
             style={{
               textDecoration: todo.complete ? "line-through" : "",
               background: todo.complete ? "#23d41d" : "#e74242",
+              cursor: "pointer",
             }}
             className="list"
           >
             <li>{todo.text}</li>
           </div>
           <div>
-            <button className="btn" onClick={() => completeTodo(todo.id)}>
+            <button className="btn comp" onClick={() => completeTodo(todo.id)}>
               Complete
             </button>
-            <button className="btn" onClick={() => deleteTodo(todo.id)}>
+            <button className="btn del" onClick={() => deleteTodo(todo.id)}>
               Delete
             </button>
           </div>

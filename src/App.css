@@ -35,18 +35,34 @@ input[type="text"] {
   width: 100%;
 }
 
+/* button {
+  display: inline-block;
+  width: auto;
+  border: 0;
+} */
+
 .btn {
   border: 0;
   border-radius: 4px;
+  display: inline-block;
   background-color: rgb(1, 182, 206);
   color: #fff;
   font-size: 18px;
   margin: 10px;
-  outline: none;
   cursor: pointer;
   font-size: 16px;
   padding: 10px;
-  margin-left: 70px;
+}
+
+.btn.comp {
+  width: 100px;
+  margin: auto 60px;
+}
+
+.btn.del {
+  width: 100px;
+
+  margin-left: -20px;
 }
 
 .btn:hover {
