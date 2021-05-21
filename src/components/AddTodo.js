@@ -27,7 +27,7 @@ export const AddTodo = () => {
 
   return (
     <>
-      <h3>Todo List</h3>
+      <h3 className="head">Todo List</h3>
       <div>
         {todos.length === 0 ? (
           <h2 style={{ color: "#23d41d", fontSize: "16px" }}>
@@ -42,15 +42,19 @@ export const AddTodo = () => {
         )}
       </div>
       <form onSubmit={handleSubmit}>
-        <div className="form-control">
+        <div>
           <input
+            className="inputs"
             type="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
             ref={inputRef}
             placeholder="What is your plan?"
           />
-          <button style={{ marginLeft: "10px", width: "100%" }} className="btn">
+          <button
+           
+            className="add-btn"
+          >
             Add
           </button>
         </div>

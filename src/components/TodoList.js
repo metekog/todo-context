@@ -19,9 +19,9 @@ export const TodoList = () => {
           >
             <li>{todo.text}</li>
           </div>
-          <div>
+          <div className="btns">
             <button className="btn comp" onClick={() => completeTodo(todo.id)}>
-              Complete
+              {todo.complete ? "Not Complete" : "Complete"}
             </button>
             <button className="btn del" onClick={() => deleteTodo(todo.id)}>
               Delete
